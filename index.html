@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header class="page-header">
   <a href="" class="logo">
-    <img class="page-header-logo" src="" alt="Логотип магазина Device">
+    <img class="page-header-logo" src="img/svg/device-header-logo.svg" alt="Логотип магазина Device">
   </a>
   <a href="" class="users-navigation-search">
     <span class="search-icon users-navigation-icon "></span>
@@ -48,7 +49,7 @@
   <section class="best-ofer-slider">
     <h2 class="visually-hidden">Лучшие предложения</h2>
     <h3 class="visually-hidden">Лазерный квадрокоптер</h3>
-    <img src="" alt="Лазерный квадрокоптер" class="slider-image">
+    <img src="img/png/slider-drone.png" alt="Лазерный квадрокоптер" class="slider-image" width="560" height="560">
     <button class="slider-button slider-prev" type="button">
       <span class="visually-hidden">Предидущий слайд</span></button>
     <button class="slider-button slider-next" type="button">
@@ -79,9 +80,10 @@
     </ol>
     <ul class="specifications-list">
       <li class="specifications-list-item">
-        <span class="range">Дальность полета</span>800<b>м</b>
+        Дальность полета<span class="range">800<b>м</b></span>
       </li>
-      <li class="specifications-list-item"><span class="radius">Радиус поражения</span>50<b>м</b>
+      <li class="specifications-list-item">
+        Радиус поражения<span class="radius">50<b>м</b></span>
       </li>
     </ul>
   </section>
@@ -127,7 +129,7 @@
     <nav class="services-navigation">
       <ul class="services-navigation-list">
         <li class="services-navigation-item">
-          <button class="services-navigation-button" type="button">Доставка</button>
+          <button class="services-navigation-button services-navigation-button-active" type="button">Доставка</button>
         </li>
         <li class="services-navigation-item">
           <button class="services-navigation-button" type="button">Гарантия</button>
@@ -137,22 +139,22 @@
         </li>
       </ul>
     </nav>
-    <h3>Доставка</h3>
+    <h3 class="service-delivery">Доставка</h3>
     <p>Мы с удовольствием доставим ваш товар прямо
       к вашему подъезду совершенно бесплатно! Ведь
       мы неплохо заработаем, поднимая его на ваш этаж.</p>
-    <img src="" alt="Пиктограмма курьера">
+    <span class="delivery-man-icon"></span>
   </section>
   <article class="delivery-service">
     <h3 class="visually-hidden">Доставим редкий товар под заказ</h3>
     <a href="#">
       <span class="delivery-icon"></span>
       <span class="delivery-description">Доставим редкий товар под заказ</span>
-      <span class="delivery-information">i</span>
+      <span class="delivery-information-icon"></span>
     </a>
   </article>
   <section class="about-us">
-    <h2>О нас</h2>
+    <h2 class="about-us-heading">О нас</h2>
     <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
     <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
     <ul class="delivery-ways">
@@ -163,7 +165,7 @@
     <a href="" class="about-us-more">Подробнее о нас</a>
   </section>
   <section class="contacts">
-    <h2>Контакты</h2>
+    <h2 class="contacts-heading">Контакты</h2>
     <p>Вы можете забрать товар сами, заехав в наш офис.
       Заодно, сможете проверить работоспособность покупки. </p>
     <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
@@ -185,9 +187,9 @@
       на рассылку</label>
     <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,
       длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-    <form action="https://echo.htmlacademy.ru/" method="post" class="description-form">
+    <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe-form">
       <input type="email" name="email" id="email-id">
-      <button type="submit">Подписаться</button>
+      <button type="submit" class="subscribe-button">Подписаться</button>
     </form>
     <span class="subscribe-free-icon"></span>
     <span class="subscribe-free">Это бесплатно</span>
@@ -196,7 +198,8 @@
 <footer class="page-footer">
   <section class="footer-contacts">
     <a href="#" class="logo">
-      <img class="footer-contacts-logo" src="" alt="Логотип магазина Device">
+      <img class="footer-contacts-logo" src="img/svg/device-footer-logo.svg" alt="Логотип магазина Device" width="145"
+           height="36">
     </a>
     <h2 class="visually-hidden">Контакты</h2>
     <address class="contacts-address">

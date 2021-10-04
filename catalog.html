@@ -2,12 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
   <title>HTML Academy: Девайс</title>
 </head>
 <body>
 <header class="page-header">
-  <a href="index.html" class="logo">
-    <img class="page-header-logo" src="" alt="Логотип магазина Device">
+  <a href="" class="logo">
+    <img class="page-header-logo" src="img/svg/device-header-logo.svg" alt="Логотип магазина Device">
   </a>
   <a href="" class="users-navigation-search">
     <span class="search-icon users-navigation-icon "></span>
@@ -15,14 +16,9 @@
   </a>
   <ul class="users-navigation">
     <li class="users-navigation-item">
-      <a href="" class="users-navigation-user">
-        <span class="navigation-entrance users-navigation-icon"></span>
-        Коля Петухов
-      </a>
-    </li>
-    <li class="users-navigation-item">
-      <a href="" class="users-navigation-exit">
-        Выйти
+      <a href="" class="users-navigation-entrance">
+        <span class="entrance-icon users-navigation-icon"></span>
+        Войти
       </a>
     </li>
     <li class="users-navigation-item">
@@ -142,42 +138,47 @@
           </li>
         </ul>
       </fieldset>
-      <button class="button" type="submit">Показать</button>
+      <button class="button button-show" type="submit">Показать</button>
     </form>
-    <form class="sorting-type">
-      <label class="sorting-list" for="sorting">Сортировка:</label>
-      <select class="select-control" id="sorting" name="sorting">
-        <option value="popular">Сначала популярное</option>
-        <option value="cheap">Сначала дешёвое</option>
-        <option value="expensive">Сначала дорогое</option>
-      </select>
-      <button class="visually-hidden" type="submit">Отсортировать продукты</button>
-    </form>
-    <a href="#" class="button button-up">
-      <span class="visually-hidden">Вверх</span>
-    </a>
-    <a href="#" class="button button-down">
-      <span class="visually-hidden">Вниз</span>
-    </a>
+    <div class="sorting-bar">
+      <form class="sorting-type">
+        <label class="sorting-list" for="sorting">Сортировка:</label>
+        <select class="select-control" id="sorting" name="sorting">
+          <option value="popular">Сначала популярное</option>
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="expensive">Сначала дорогое</option>
+        </select>
+        <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+      </form>
+      <a href="#" class="button button-up">
+        <span class="visually-hidden">Вверх</span>
+      </a>
+      <a href="#" class="button button-down">
+        <span class="visually-hidden">Вниз</span>
+      </a>
+    </div>
     <ul class="product-list">
       <li class="product-card">
         <a href="#" class="more-about">Подробнее</a>
         <a class="product-card-link" href="#">
-          <img class="product-card-image" src="" alt="">
+          <img class="product-card-image" src="img/JPG/monopod-lite.jpg"
+               alt="Любительская селфи-палка с закрепленным телефоном" width="360" height="380">
           <h3 class="product-card-title">Любительская селфи-палка</h3>
         </a>
         <span class="product-card-price">500 ₽</span>
       </li>
       <li class="product-card">
         <a class="product-card-link" href="#">
-          <img class="product-card-image" src="" alt="">
-          <h3 class="product-card-title">Профессиональная селфи-палка </h3>
+          <img class="product-card-image" src="img/JPG/monopod-pro.jpg" alt="Профессиональная селфи-палка" width="360"
+               height="380">
+          <h3 class="product-card-title">Профессиональная селфи-палка</h3>
         </a>
         <span class="product-card-price">1500 ₽</span>
       </li>
       <li class="product-card">
         <a class="product-card-link" href="#">
-          <img class="product-card-image" src="" alt="">
+          <img class="product-card-image" src="img/JPG/monopod-aqua.jpg" alt="Непотопляемая
+            селфи-палка с закрепленной камерой" width="360" height="380">
           <h3 class="product-card-title">Непотопляемая
             селфи-палка</h3>
         </a>
@@ -185,7 +186,8 @@
       </li>
       <li class="product-card">
         <a class="product-card-link" href="#">
-          <img class="product-card-image" src="" alt="">
+          <img class="product-card-image" src="img/JPG/monopod-arm.jpg"
+               alt="Селф-палка в виде человеческой руки с закрепленным телефоном" width="360" height="380">
           <span class="new-item-label">new</span>
           <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
         </a>
@@ -195,27 +197,27 @@
     <button class="button pagination-show-more" type="button">Загрузить ещё</button>
     <ul class="pagination">
       <li class="pagination-item">
-        <a class="pagination-link pagination-prev" href="#">
+        <a class="pagination-link pagination-prev pagination-direction" href="#">
           Назад
         </a>
       </li>
       <li class="pagination-item">
-        <a class="pagination-link" href="#">1</a>
+        <a class="pagination-link pagination-number" href="#">1</a>
       </li>
       <li class="pagination-item">
-        <a class="pagination-link" href="#">2</a>
+        <a class="pagination-link pagination-number" href="#">2</a>
       </li>
       <li class="pagination-item">
-        <a class="pagination-link" href="#">3</a>
+        <a class="pagination-link pagination-number" href="#">3</a>
       </li>
       <li class="pagination-item">
-        <a class="pagination-link" href="#">...</a>
+        <a class="pagination-link pagination-number" href="#">...</a>
       </li>
       <li class="pagination-item">
-        <a class="pagination-link" href="#">15</a>
+        <a class="pagination-link pagination-number" href="#">15</a>
       </li>
       <li class="pagination-item">
-        <a class="pagination-link pagination-next" href="#">
+        <a class="pagination-link pagination-next pagination-direction" href="#">
           Вперед
         </a>
       </li>
@@ -225,13 +227,15 @@
 <footer class="page-footer">
   <section class="footer-contacts">
     <a href="#" class="logo">
-      <img class="footer-contacts-logo" src="" alt="Логотип магазина Device">
+      <img class="footer-contacts-logo" src="img/svg/device-footer-logo.svg" alt="Логотип магазина Device" width="145"
+           height="36">
     </a>
     <h2 class="visually-hidden">Контакты</h2>
     <address class="contacts-address">
       <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки,5, литераП.</p>
       <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
     </address>
+    <span class="contacts-decoration-line"></span>
     <a class="academy-link" href="https://htmlacademy.ru/">.html academy</a>
   </section>
   <section>
