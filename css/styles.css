@@ -1,3 +1,5 @@
+/* =========================================== FONTS ======================================================== */
+
 @font-face {
   font-family: "raleway";
   font-weight: 800;
@@ -30,8 +32,58 @@
   font-display: swap;
 }
 
+/* =========================================== GLOBAL ======================================================== */
+
 html {
   height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*body > * {*/
+/*  outline: 1px solid red;*/
+/*}*/
+
+/*body > * > * {*/
+/*  outline: 1px solid green;*/
+/*}*/
+
+/*body > * > * > * {*/
+/*  outline: 1px solid blue;*/
+/*}*/
+
+/*body > * > * > * > * {*/
+/*  outline: 1px solid mediumvioletred;*/
+/*}*/
+
+/*body > * > * > * > * > * {*/
+/*  outline: 1px solid orangered;*/
+/*}*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fieldset-reset-list {
+  border: none;
+  padding: 0;
 }
 
 body {
@@ -48,53 +100,118 @@ body {
   background-color: #ffffff;
 }
 
-header.page-header {
-  background-color: #FFE17F;
-  color: #000000;
-  font-size: 16px;
-  width: 1160px;
-  margin: 0 auto;
-}
-
-.users-navigation-list {
-  display: flex;
-  width: 1076px;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.users-navigation {
-  display: flex;
-  width: 538px;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-}
-
-nav.main-navigation {
-  font-family: "raleway", "Arial", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 18px;
-}
-
-.main-navigation-list {
-  display: flex;
-  width: 1041px;
-  justify-content: space-around;
-  margin: 0 auto;
-  padding: 0;
-}
-
 .main-container {
   flex-grow: 1;
 }
 
-.best-ofer-slider {
-  display: flex;
+h1 {
+  font-family: "raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+
+}
+
+h2 {
+  font-family: "raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ================================================ INDEX-PAGE =========================================================== */
+
+/* =========================================== HEADER ======================================================== */
+
+.page-header {
+  background-color: #FFE17F;
 
   width: 1160px;
-  margin: 0 auto;
+  margin: 40px auto 0 auto;
+}
+
+.header-wrapper {
+  margin: 0 60px;
+}
+
+
+div.users-navigation-list {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+
+ul.users-navigation {
+  display: flex;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.users-navigation-list a {
+  color: #000000;
+  font-size: 16px;
+}
+
+.users-navigation-search {
+  margin-right: auto;
+}
+
+.entrance {
+  margin-right: auto;
+}
+
+.compare {
+  margin-right: 14px;
+}
+
+.cart {
+}
+
+.main-navigation {
+  margin-bottom: 167px;
+}
+
+.main-navigation-list {
+  display: flex;
+}
+
+.navigation-list-item-catalog {
+  margin-right: 350px;
+}
+
+.navigation-list-item-delivery {
+  margin-right: 34px;
+}
+
+.navigation-list-item-guarantee {
+  margin-right: 92px;
+}
+
+.main-navigation a {
+  font-family: "raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 18px;
+  color: #000000;
+}
+
+
+/* =========================================== MAIN ======================================================== */
+
+/* =================== SLIDER ======================================================== */
+
+
+.best-ofer-slider {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto 70px auto;
 }
 
 .gallery-container {
@@ -103,6 +220,13 @@ nav.main-navigation {
 
 .description-container {
   width: 560px;
+}
+
+.slide-number {
+  font-weight: 800;
+  font-size: 180px;
+  color: #FFFFFF;
+  background-color: #FFE17F;
 }
 
 .slide-description-header {
@@ -135,17 +259,11 @@ nav.main-navigation {
   color: #000000;
 }
 
+/* =================== CATEGORIES ======================================================== */
+
 .categories {
-  font-family: "raleway", "Arial", sans-serif;
-  font-weight: 800;
-  line-height: 24px;
-  color: #000000;
   width: 1160px;
   margin: 0 auto;
-}
-
-.visually-hidden {
-  display: none;
 }
 
 .categories-navigation-list {
@@ -155,10 +273,17 @@ nav.main-navigation {
 }
 
 .categories-navigation-item {
-  width: 160px;
-  background-color: #FFE17F;
-  justify-content: space-between;
+
 }
+
+.categories a {
+  font-family: "raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  color: #000000;
+}
+
+/* =================== SERVICES ======================================================== */
 
 .services-section-main {
   background-color: #F0F0F0;
@@ -173,12 +298,6 @@ nav.main-navigation {
 
 .services-navigation {
   width: 281px;
-  margin: 0;
-  padding: 0;
-}
-
-.service-container {
-  width: 879px;
 }
 
 .services-navigation-list {
@@ -200,6 +319,10 @@ nav.main-navigation {
   color: #FFE17F;
 }
 
+.service-container {
+  width: 879px;
+}
+
 .service-header {
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
@@ -208,16 +331,28 @@ nav.main-navigation {
   color: #000000;
 }
 
+/* =================== DELIVERY-SERVICES ======================================================== */
+
 .delivery-service {
+  background-color: #F0F0F0;
+  width: 1160px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.delivery-service a {
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
-  background-color: #F0F0F0;
-  width: 1160px;
+  width: 910px;
+  display: block;
   margin: 0 auto;
+  padding: 37px 125px 43px 125px;
 }
+
+/* =================== ABOUT-US-CONTACTS ======================================================== */
 
 .about-us-contacts {
   width: 1160px;
@@ -229,15 +364,7 @@ nav.main-navigation {
   width: 560px;
 }
 
-h2 {
-  font-family: "raleway", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-}
-
-.delivery-ways {
+.delivery-ways a {
   font-weight: 700;
   line-height: 20px;
   color: #000000;
@@ -264,12 +391,18 @@ address {
   font-style: normal;
 }
 
+.contacts-address a {
+  color: #000000;
+}
+
 .contact-us {
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
   line-height: 21px;
   color: #000000;
 }
+
+/* =================== SUBSCRIBE ======================================================== */
 
 .subscribe-main {
   background-color: #F0F0F0;
@@ -297,6 +430,8 @@ address {
   color: #000000;
 }
 
+/* =========================================== FOOTER ======================================================== */
+
 footer {
   background-color: #444444;
   font-size: 16px;
@@ -309,40 +444,66 @@ footer {
   display: flex;
 }
 
-p.contacts-address-text {
+.contacts-address-footer p {
   line-height: 19px;
   color: #FFFFFF;
 }
 
-.footer-navigation-list {
+.contacts-address-footer a {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.footer-navigation-list a {
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
   line-height: 21px;
   font-size: 18px;
+  color: #FFFFFF;
 }
 
+/* ================================================ CATALOG-PAGE =========================================================== */
+
 .main-container-inner {
+  width: 1160px;
   margin: 0 auto;
 }
 
-.main-inner {
-  color: #000000;
+.inner-header {
+  width: 1160px;
+  margin: 0 auto;
 }
 
-h1 {
-  font-family: "raleway", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-
+.inner-header-wrapper {
+  margin-left: 60px;
 }
 
 .breadcrumbs {
-  font-size: 16px;
-  line-height: 19px;
   display: flex;
   justify-content: space-around;
+  width: 425px;
+}
+
+.breadcrumbs a {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+/* =================== CATALOG ======================================================== */
+
+.catalog-wrapper {
+  margin-left: 60px;
+}
+
+.catalog-filter {
+  display: flex;
+}
+
+/* =================== FILTER-BAR ======================================================== */
+
+.filter-bar-container {
+  width: 468px;
 }
 
 span.filter {
@@ -353,27 +514,19 @@ span.filter {
   line-height: 19px;
 }
 
-.catalog-products {
-  display: flex;
-}
-
-.filter-bar-container {
-  width: 468px;
-}
-
-.catalog-filter {
+.catalog-filter-form {
   background-color: #F0F0F0;
-}
-
-.catalog-filter-title {
-  font-weight: 700;
-  line-height: 20px;
 }
 
 .catalog-filter-label {
   font-size: 15px;
   line-height: 18px;
   color: #444444;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  line-height: 20px;
 }
 
 .control-label {
@@ -389,14 +542,21 @@ span.filter {
   font-style: normal;
 }
 
+/* =================== SORTING-BAR ======================================================== */
+
 .product-list-container {
   width: 972px;
-  display: flex;
-  flex-direction: column;
 }
 
 .sorting-bar {
   background-color: #EBEBEB;
+}
+
+.sorting-list {
+  font-family: "raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .select-control {
@@ -408,23 +568,11 @@ span.filter {
 
 }
 
-.sorting-list {
-  font-family: "raleway", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 19px;
-}
+/* =================== CATALOG ================================ */
 
 .product-list {
   width: 760px;
   margin: 0 auto;
-}
-
-
-.more-about {
-  font-family: "raleway", "Arial", sans-serif;
-  font-weight: 800;
-  line-height: 21px;
 }
 
 .product-card-price {
