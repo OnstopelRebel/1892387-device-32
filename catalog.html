@@ -76,10 +76,12 @@
       </div>
     </header>
     <div class="catalog-wrapper">
-      <section class="catalog-filter">
-        <h2 class="visually-hidden">Фильтр каталога</h2>
-        <div class="filter-bar-container">
+      <section class="product-catalog">
+        <h2 class="visually-hidden">Каталог товаров</h2>
+        <section class="filter-bar">
+          <h3 class="visually-hidden">Фильтр каталога</h3>
           <span class="filter">фильтр:</span>
+
           <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group fieldset-reset-list">
               <legend class="catalog-filter-title">Стоимость</legend>
@@ -158,8 +160,10 @@
             </fieldset>
             <button class="button button-show" type="submit">Показать</button>
           </form>
-        </div>
-        <div class="product-list-container">
+
+        </section>
+        <section class="catalog">
+          <h3 class="visually-hidden">Список товаров</h3>
           <div class="sorting-bar">
             <form class="sorting-type">
               <label class="sorting-list" for="sorting">Сортировка:</label>
@@ -177,41 +181,49 @@
               <span class="visually-hidden">Вниз</span>
             </a>
           </div>
-          <ul class="product-list">
-            <li class="product-card">
-              <a class="product-card-link" href="#">
-                <img class="product-card-image" src="img/jpg/monopod-lite.jpg"
-                     alt="Любительская селфи-палка с закрепленным телефоном" width="360" height="380">
-                <h3 class="product-card-title">Любительская селфи-палка</h3>
-              </a>
-              <span class="product-card-price">500 ₽</span>
+          <ul class="catalog-list reset-list">
+            <li class="catalog-item">
+              <article class="product">
+                <a class="product-card-link" href="#">
+                  <img class="product-card-image" src="img/jpg/monopod-lite.jpg"
+                       alt="Любительская селфи-палка с закрепленным телефоном" width="360" height="380">
+                  <h3 class="product-card-title">Любительская селфи-палка</h3>
+                </a>
+                <span class="product-card-price">500 ₽</span>
+              </article>
             </li>
-            <li class="product-card">
-              <a class="product-card-link" href="#">
-                <img class="product-card-image" src="img/jpg/monopod-pro.jpg" alt="Профессиональная селфи-палка"
-                     width="360"
-                     height="380">
-                <h3 class="product-card-title">Профессиональная селфи-палка</h3>
-              </a>
-              <span class="product-card-price">1500 ₽</span>
+            <li class="catalog-item">
+              <article class="product">
+                <a class="product-card-link" href="#">
+                  <img class="product-card-image" src="img/jpg/monopod-pro.jpg" alt="Профессиональная селфи-палка"
+                       width="360"
+                       height="380">
+                  <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+                </a>
+                <span class="product-card-price">1500 ₽</span>
+              </article>
             </li>
-            <li class="product-card">
-              <a class="product-card-link" href="#">
-                <img class="product-card-image" src="img/jpg/monopod-aqua.jpg" alt="Непотопляемая
+            <li class="catalog-item">
+              <article class="product">
+                <a class="product-card-link" href="#">
+                  <img class="product-card-image" src="img/jpg/monopod-aqua.jpg" alt="Непотопляемая
             селфи-палка с закрепленной камерой" width="360" height="380">
-                <h3 class="product-card-title">Непотопляемая
-                  селфи-палка</h3>
-              </a>
-              <span class="product-card-price">2500 ₽</span>
+                  <h3 class="product-card-title">Непотопляемая
+                    селфи-палка</h3>
+                </a>
+                <span class="product-card-price">2500 ₽</span>
+              </article>
             </li>
-            <li class="product-card">
-              <a class="product-card-link" href="#">
-                <img class="product-card-image" src="img/jpg/monopod-arm.jpg"
-                     alt="Селф-палка в виде человеческой руки с закрепленным телефоном" width="360" height="380">
-                <span class="new-item-label">new</span>
-                <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
-              </a>
-              <span class="product-card-price">4900 ₽</span>
+            <li class="catalog-item">
+              <article class="product">
+                <a class="product-card-link" href="#">
+                  <img class="product-card-image" src="img/jpg/monopod-arm.jpg"
+                       alt="Селф-палка в виде человеческой руки с закрепленным телефоном" width="360" height="380">
+                  <span class="new-item-label">new</span>
+                  <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+                </a>
+                <span class="product-card-price">4900 ₽</span>
+              </article>
             </li>
           </ul>
           <button class="button pagination-show-more" type="button">Загрузить ещё</button>
@@ -242,7 +254,7 @@
               </a>
             </li>
           </ul>
-        </div>
+        </section>
       </section>
     </div>
   </main>
