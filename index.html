@@ -154,7 +154,7 @@
         </nav>
         <div class="service-container">
           <h3 class="service-header">Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо
+          <p>Мы с удовольствием доставим ваш товар прямо <br>
             к вашему подъезду совершенно бесплатно! Ведь
             мы неплохо заработаем, поднимая его на ваш этаж.</p>
           <span class="delivery-man-icon"></span>
@@ -171,9 +171,11 @@
   <div class="about-us-contacts">
     <section class="about-us">
       <h2 class="about-us-heading">О нас</h2>
-      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-      <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
-      <ul class="delivery-ways reset-list">
+      <div class="about-us-text">
+        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+      </div>
+      <ul class="delivery-ways">
         <li class="delivery-ways-item"><a href="">Меловые линии</a></li>
         <li class="delivery-ways-item"><a href="">СДИК</a></li>
         <li class="delivery-ways-item"><a href="">ТоксБерри</a></li>
@@ -186,7 +188,7 @@
         Заодно, сможете проверить работоспособность покупки. </p>
       <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
       <address class="contacts-address">
-        <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки,5, литераП.</p>
+        <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки,5, литера П.</p>
         <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
       </address>
       <h3 class="contacts-subtitle">Время работы</h3>
@@ -197,16 +199,15 @@
       <a href="" class="contact-us">Напишите нам</a>
     </section>
   </div>
-  <div class="subscribe-main">
+  <div class="subscribe-wrapper">
     <section class="subscribe">
       <h2 class="visually-hidden">Подписка на рассылку</h2>
       <label for="email-id">
-        Подпишитесь <br>
-        на рассылку</label>
-      <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,
+        Подпишитесь<br>на рассылку</label>
+      <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,<br>
         длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
       <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe-form">
-        <input type="email" name="email" id="email-id">
+        <input type="email" name="email" id="email-id" placeholder="Ваш e-mail">
         <button type="submit" class="subscribe-button">Подписаться</button>
       </form>
       <span class="subscribe-free">Это бесплатно</span>
@@ -215,19 +216,21 @@
 </main>
 <footer class="page-footer">
   <div class="page-footer-main">
-    <section class="footer-contacts">
-      <a href="#" class="logo">
-        <img class="footer-contacts-logo" src="img/svg/device-footer-logo-icon.svg" alt="Логотип магазина Device"
-             width="145"
-             height="36">
-      </a>
-      <h2 class="visually-hidden">Контакты</h2>
-      <address class="contacts-address-footer">
-        <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки,5, литераП.</p>
-        <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-      </address>
-      <span class="contacts-decoration-line"></span>
-      <a class="academy-link" href="https://htmlacademy.ru/">.html academy</a>
+    <a href="#" class="footer-logo">
+      <img src="img/svg/device-footer-logo-icon.svg" alt="Логотип магазина Device"
+           width="145"
+           height="36">
+    </a>
+    <section class="footer-contacts-address">
+      <h2 class="visually-hidden">Адрес</h2>
+      <p class="footer-address">Санкт-Петербург, набережная реки Карповки,5, литера П.</p>
+    </section>
+    <div class="academy-link-wrapper">
+      <a class="academy-link" href="https://htmlacademy.ru/"><img src="https://via.placeholder.com/115x34" alt=""></a>
+    </div>
+    <section class="footer-contacts-phone">
+      <h2 class="visually-hidden">Телефон</h2>
+      <a class="contacts-phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
     </section>
     <section class="footer-navigation">
       <h2 class="visually-hidden">Навигация по сайту</h2>
@@ -237,25 +240,25 @@
         <li class="footer-navigation-item"><a href="#">Контакты</a></li>
       </ul>
     </section>
-    <section class="social">
+    <section class="footer-social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <ul class="footer-social-list">
+      <ul class="footer-social-list reset-list">
         <li class="footer-social-item">
           <a class="button" href="#">
             <span class="visually-hidden">Фэйсбук</span>
-            <span class="facebook"></span>
+            <img src="https://via.placeholder.com/40x40" alt="">
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button" href="#">
             <span class="visually-hidden">Инстаграм</span>
-            <span class="instagram"></span>
+            <img src="https://via.placeholder.com/40x40" alt="">
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button" href="#">
             <span class="visually-hidden">Твиттер</span>
-            <span class="twitter"></span>
+            <img src="https://via.placeholder.com/40x40" alt="">
           </a>
         </li>
       </ul>

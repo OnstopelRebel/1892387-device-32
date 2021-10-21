@@ -7,7 +7,7 @@
   <title>Каталог | Интернет магазин Девайс</title>
 </head>
 <body>
-<header class="page-header">
+<header class="page-header catalog-header">
   <div class="header-wrapper">
     <a href="" class="logo">
       <img class="page-header-logo" src="img/svg/device-header-logo-icon.svg" alt="Логотип магазина Device">
@@ -83,7 +83,7 @@
           <span class="filter">фильтр:</span>
 
           <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filter-group fieldset-reset-list">
+            <fieldset class="catalog-filter-group reset-fieldset">
               <legend class="catalog-filter-title">Стоимость</legend>
               <button class="range-toggle toggle-min" type="button">
                 <span class="visually-hidden">Изменить минимальную цену.</span>
@@ -98,7 +98,7 @@
                 до 5000<input class="catalog-filter-input" type="number" name="max-price">
               </label>
             </fieldset>
-            <fieldset class="catalog-filter-group fieldset-reset-list">
+            <fieldset class="catalog-filter-group reset-fieldset">
               <legend class="catalog-filter-title">Цвет</legend>
               <ul class="catalog-filter-list reset-list">
                 <li class="catalog-filter-item">
@@ -138,7 +138,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="catalog-filter-group fieldset-reset-list">
+            <fieldset class="catalog-filter-group reset-fieldset">
               <legend class="catalog-filter-title">Bluetooth</legend>
               <ul class="catalog-filter-list reset-list">
                 <li class="catalog-filter-item">
@@ -219,7 +219,7 @@
                 <a class="product-card-link" href="#">
                   <img class="product-card-image" src="img/jpg/monopod-arm.jpg"
                        alt="Селф-палка в виде человеческой руки с закрепленным телефоном" width="360" height="380">
-                  <span class="new-item-label">new</span>
+                  <span class="new-item-label visually-hidden">new</span>
                   <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
                 </a>
                 <span class="product-card-price">4900 ₽</span>
@@ -228,8 +228,8 @@
           </ul>
           <button class="button pagination-show-more" type="button">Загрузить ещё</button>
           <ul class="pagination reset-list">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-prev pagination-direction" href="#">
+            <li class="pagination-item pagination-prev">
+              <a class="pagination-link pagination-direction" href="#">
                 Назад
               </a>
             </li>
@@ -248,8 +248,8 @@
             <li class="pagination-item">
               <a class="pagination-link pagination-number" href="#">15</a>
             </li>
-            <li class="pagination-item">
-              <a class="pagination-link pagination-next pagination-direction" href="#">
+            <li class="pagination-item  pagination-next">
+              <a class="pagination-link pagination-direction" href="#">
                 Вперед
               </a>
             </li>
@@ -261,19 +261,21 @@
 </div>
 <footer class="page-footer">
   <div class="page-footer-main">
-    <section class="footer-contacts">
-      <a href="#" class="logo">
-        <img class="footer-contacts-logo" src="img/svg/device-footer-logo-icon.svg" alt="Логотип магазина Device"
-             width="145"
-             height="36">
-      </a>
-      <h2 class="visually-hidden">Контакты</h2>
-      <address class="contacts-address-footer">
-        <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки,5, литераП.</p>
-        <a class="contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-      </address>
-      <span class="contacts-decoration-line"></span>
-      <a class="academy-link" href="https://htmlacademy.ru/">.html academy</a>
+    <a href="#" class="footer-logo">
+      <img src="img/svg/device-footer-logo-icon.svg" alt="Логотип магазина Device"
+           width="145"
+           height="36">
+    </a>
+    <section class="footer-contacts-address">
+      <h2 class="visually-hidden">Адрес</h2>
+      <p class="footer-address">Санкт-Петербург, набережная реки Карповки,5, литера П.</p>
+    </section>
+    <div class="academy-link-wrapper">
+      <a class="academy-link" href="https://htmlacademy.ru/"><img src="https://via.placeholder.com/115x34" alt=""></a>
+    </div>
+    <section class="footer-contacts-phone">
+      <h2 class="visually-hidden">Телефон</h2>
+      <a class="contacts-phone" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
     </section>
     <section class="footer-navigation">
       <h2 class="visually-hidden">Навигация по сайту</h2>
@@ -283,25 +285,25 @@
         <li class="footer-navigation-item"><a href="#">Контакты</a></li>
       </ul>
     </section>
-    <section class="social">
+    <section class="footer-social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <ul class="footer-social-list">
+      <ul class="footer-social-list reset-list">
         <li class="footer-social-item">
           <a class="button" href="#">
             <span class="visually-hidden">Фэйсбук</span>
-            <span class="facebook"></span>
+            <img src="https://via.placeholder.com/40x40" alt="">
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button" href="#">
             <span class="visually-hidden">Инстаграм</span>
-            <span class="instagram"></span>
+            <img src="https://via.placeholder.com/40x40" alt="">
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button" href="#">
             <span class="visually-hidden">Твиттер</span>
-            <span class="twitter"></span>
+            <img src="https://via.placeholder.com/40x40" alt="">
           </a>
         </li>
       </ul>
