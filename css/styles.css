@@ -111,21 +111,21 @@ a {
   text-decoration: none;
 }
 
-body > * {
-  outline: 1px solid red;
-}
+/*body > * {*/
+/*  outline: 1px solid red;*/
+/*}*/
 
-body > * > * {
-  outline: 1px solid green;
-}
+/*body > * > * {*/
+/*  outline: 1px solid green;*/
+/*}*/
 
-body > * > * > * {
-  outline: 1px solid blue;
-}
+/*body > * > * > * {*/
+/*  outline: 1px solid blue;*/
+/*}*/
 
-body > * > * > * > * {
-  outline: 1px solid mediumvioletred;
-}
+/*body > * > * > * > * {*/
+/*  outline: 1px solid mediumvioletred;*/
+/*}*/
 
 body > * > * > * > * > * {
   outline: 1px solid orangered;
@@ -150,28 +150,30 @@ body > * > * > * > * > * {
 
 div.users-navigation-list {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
+.users-navigation-search {
+  margin-right: auto;
+  width: 480px;
+}
 
 ul.users-navigation {
   display: flex;
   width: 50%;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
 }
+
 
 .users-navigation-list a {
   color: #000000;
   font-size: 16px;
 }
 
-.users-navigation-search {
-  margin-right: auto;
-}
-
 .entrance {
   margin-right: auto;
+  width: 220px;
 }
 
 .compare {
@@ -187,18 +189,25 @@ ul.users-navigation {
 
 .main-navigation-list {
   display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.main-navigation-list li {
+  width: max-content;
 }
 
 .navigation-list-item-catalog {
-  margin-right: 350px;
+  width: 293px;
+  margin-right: 290px;
 }
 
 .navigation-list-item-delivery {
-  margin-right: 34px;
+  margin-right: 19px;
 }
 
 .navigation-list-item-guarantee {
-  margin-right: 92px;
+  margin-right: 62px;
 }
 
 .main-navigation a {
@@ -206,6 +215,9 @@ ul.users-navigation {
   font-weight: 800;
   font-style: normal;
   font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: calc(1em / 5);
   color: #000000;
 }
 
@@ -267,6 +279,8 @@ ul.users-navigation {
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
   line-height: 21px;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
   color: #000000;
   grid-column: 1/2;
   grid-row: 3/4;
@@ -358,10 +372,11 @@ ul.users-navigation {
   color: #000000;
   display: flex;
   width: 280px;
-  height: 100%;
+  height: 319px;
   padding-top: 60px;
+  padding-bottom: 45px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .services-navigation-item {
@@ -377,8 +392,9 @@ ul.users-navigation {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
-  font-style: normal;
+  letter-spacing: calc(1em / 5);
   text-transform: uppercase;
+  font-style: normal;
   width: 160px;
   border: none;
   padding-top: 9px;
@@ -413,21 +429,23 @@ ul.users-navigation {
 
 .delivery-service {
   background-color: #F0F0F0;
+  display: flex;
+  justify-content: center;
   width: 1160px;
   margin: 0 auto 97px auto;
-  text-align: center;
 }
 
 .delivery-service a {
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
   font-size: 20px;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
   line-height: 24px;
   color: #000000;
-  width: 910px;
-  display: block;
-  margin: 0 auto;
-  padding: 37px 125px 43px 125px;
+  width: 100%;
+  text-align: center;
+  padding: 37px 0 43px 0;
 }
 
 /* =================== ABOUT-US-CONTACTS ======================================================== */
@@ -483,6 +501,8 @@ ul.users-navigation {
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
   line-height: 21px;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
   color: #000000;
   width: 260px;
   text-align: center;
@@ -531,6 +551,8 @@ p.contacts-address-text {
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
   line-height: 21px;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -600,6 +622,8 @@ p.contacts-address-text {
   font-weight: 800;
   line-height: 21px;
   font-size: 18px;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
   color: #000000;
   width: 260px;
   padding: 17px 0 18px 0;
@@ -707,6 +731,8 @@ footer {
   line-height: 21px;
   font-size: 18px;
   color: #FFFFFF;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
 }
 
 .footer-social {
@@ -762,9 +788,19 @@ footer {
 
 .breadcrumbs {
   display: flex;
-  justify-content: space-between;
-  width: 425px;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+  width: 100%;
 }
+
+.breadcrumbs-item {
+  width: max-content;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 36px;
+}
+
 
 .breadcrumbs a {
   font-size: 16px;
@@ -781,6 +817,7 @@ footer {
 
 .product-catalog {
   display: flex;
+  /*grid-template-columns: 35% 65%;*/
 }
 
 /* =================== FILTER-BAR ======================================================== */
@@ -788,17 +825,38 @@ footer {
 .filter-bar {
   display: flex;
   flex-direction: column;
+}
 
-  background-color: #F0F0F0;
+.filter-wrapper {
+  display: flex;
+  background-color: #DCDCDC;
+  height: 75px;
 }
 
 span.filter {
-  background-color: #DCDCDC;
+  width: 268px;
+  height: 70px;
+  margin-left: auto;
   font-family: "raleway", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
+  background-color: #DCDCDC;
 }
+
+/*span.filter::before {*/
+/*  content: "";*/
+/*  width: calc((100vh - 1100px) / 2);*/
+/*  min-height: 70px;*/
+/*  !*height: 100%;*!*/
+/*  background-color: #DCDCDC;*/
+/*  position: relative;*/
+/*  top: 404px;*/
+/*  left: 360px;*/
+/*  border: 1px solid red;*/
+/*}*/
 
 
 .catalog-filter-form {
@@ -827,6 +885,8 @@ span.filter {
   font-size: 18px;
   line-height: 21px;
   font-style: normal;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
 }
 
 /* =================== SORTING-BAR ======================================================== */
@@ -850,6 +910,8 @@ span.filter {
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
 }
 
 .select-control {
@@ -895,6 +957,8 @@ span.filter {
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
   grid-row: -2/-3;
   grid-column: 1/-1;
 
@@ -925,6 +989,8 @@ span.filter {
 
 .pagination :first-child a, .pagination :last-child a {
   color: #000000;
+  letter-spacing: calc(1em / 5);
+  text-transform: uppercase;
 }
 
 .pagination-prev {
