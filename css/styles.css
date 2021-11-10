@@ -186,17 +186,17 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-input[type=text]::-ms-clear,
-input[type=text]::-ms-reveal {
+.users-navigation-search input::-ms-clear,
+.users-navigation-search input::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration {
+.users-navigation-search input::-webkit-search-decoration,
+.users-navigation-search input::-webkit-search-cancel-button,
+.users-navigation-search input::-webkit-search-results-button,
+.users-navigation-search input::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -293,13 +293,17 @@ div.users-navigation-list {
   outline: 2px solid #AF4FFF;
 }
 
-.users-navigation-search input:focus + .search-button {
-  display: block;
+.search-button:not(:placeholder-shown):focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
-.users-navigation-search input:active {
+.users-navigation-search input:not(:placeholder-shown) {
   outline: 2px solid #000000;
   border-radius: 25px;
+}
+
+.users-navigation-search input:not(:placeholder-shown) + .search-button {
+  display: block;
 }
 
 .users-navigation-search input:hover .search-button {
@@ -837,10 +841,6 @@ ul.users-navigation {
   position: absolute;
   height: 100%;
   top: 0;
-  bottom: 11px;
-  left: 0;
-  right: 0;
-  background-color: #FFC700;
   z-index: -1;
 }
 
@@ -888,7 +888,7 @@ ul.users-navigation {
   width: 497px;
 }
 
-/* =================== DELIVERY-SERVICES ======================================================== */
+/* =================== DELIVERY-SERVICE ======================================================== */
 
 .delivery-service {
   background-color: #F0F0F0;
@@ -1117,6 +1117,10 @@ p.contacts-address-text {
   padding: 0;
   border: none;
   background-color: #F0F0F0;
+}
+
+.subscribe-form:hover {
+  border-bottom: 3px solid rgba(27%, 27%, 27%, 0.2);
 }
 
 .subscribe-form input:focus {
@@ -1583,6 +1587,49 @@ span.filter::before {
   font-style: normal;
   letter-spacing: calc(1em / 5);
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-show::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  background-color: #FFC700;
+  left: 0;
+  right: 0;
+  top: 8px;
+  z-index: -1;
+}
+
+.button-show:hover::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  background-color: #FFC700;
+  left: 0;
+  right: 0;
+  top: -8px;
+  bottom: -8px;
+  z-index: -1;
+}
+
+.button-show:focus-visible {
+  outline: none;
+}
+
+.button-show:focus-visible::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  background-color: #AF4FFF;
+  left: 0;
+  right: 0;
+  top: 8px;
+  z-index: -1;
 }
 
 /* =================== SORTING-BAR ======================================================== */
@@ -1617,6 +1664,7 @@ span.filter::before {
 
 .sorting-type {
   margin-left: 72px;
+  margin-right: auto;
 }
 
 .sorting-list {
@@ -1643,17 +1691,27 @@ span.filter::before {
 }
 
 .sort-button {
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: #EBEBEB;
   cursor: pointer;
 }
 
+.sort-button:not(.sort-active) svg:hover {
+  opacity: 0.5;
+}
+
+.sort-button:focus-visible {
+  border: 5px solid #AF4FFF;
+  outline: none;
+}
+
 .sort-up {
-  margin-left: auto;
   transform: rotate(180deg);
 }
 
-.sort-active {
+.sort-button:not(.sort-active) svg {
   opacity: 0.2;
 }
 
@@ -1670,7 +1728,7 @@ span.filter::before {
 
 .product {
   position: relative;
-  cursor: pointer;
+  cursor: default;
 }
 
 .product-card-image {
@@ -1693,7 +1751,6 @@ span.filter::before {
   color: #000000;
   text-transform: uppercase;
   letter-spacing: calc(1em / 5);
-  /*display: none;*/
   position: absolute;
   top: 180px;
   left: 108px;
@@ -1702,7 +1759,7 @@ span.filter::before {
   opacity: 0;
 }
 
-.product-card-link::before {
+.product-card-link::after {
   content: "";
   width: 360px;
   height: 380px;
@@ -1713,7 +1770,7 @@ span.filter::before {
   left: -108px;
 }
 
-.product-card-link::after {
+.product-card-link::before {
   content: "";
   position: absolute;
   left: -10px;
@@ -1724,19 +1781,36 @@ span.filter::before {
   z-index: -1;
 }
 
+.product-card-link:hover::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  bottom: -6px;
+  height: 40px;
+  background-color: #FFC700;
+  z-index: -1;
+}
+
+.product-card-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
 
 .product:hover .product-card-link {
   opacity: 1;
 }
 
-.product-card-link:focus-visible + .product-card-image {
+.product:focus-within .product-card-image {
   border: 5px solid #AF4FFF;
   outline: none;
 }
 
-.product-card-link:focus-visible .product-card {
+.product:focus-within .product-card-title,
+.product:focus-within .product-card-price {
   color: #AF4FFF;
 }
+
 
 .product-card-title {
   font-weight: 700;
@@ -1828,10 +1902,25 @@ span.filter::before {
   background-color: #DCDCDC;
 }
 
-.pagination:first-child a:focus-visible,
-.pagination:last-child a:focus-visible {
+.pagination-item a:hover {
+  color: #444444;
+}
+
+.pagination a:focus-visible,
+.pagination a:focus-visible {
   border: 5px solid #AF4FFF;
   outline: none;
+}
+
+.pagination-item:first-child a:active,
+.pagination-item:last-child a:active {
+  background-color: #DCDCDC;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item:not(:first-of-type):not(:last-of-type):active {
+  color: #444444;
+  opacity: 0.1;
 }
 
 .pagination-item:not(:first-of-type):not(:last-of-type) {
