@@ -149,7 +149,9 @@ a {
   position: absolute;
   left: -39px;
   right: -39px;
-  top: 6px;
+  /* top: 6px; */
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   height: 8px;
   background-color: #FFE17F;
@@ -160,8 +162,8 @@ a {
   position: absolute;
   left: -39px;
   right: -39px;
-  top: -10px;
-  bottom: -6px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   height: 40px;
   background-color: #FFE17F;
@@ -176,7 +178,8 @@ a {
   position: absolute;
   left: -20px;
   right: -20px;
-  top: 6px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   height: 8px;
   background-color: #AF4FFF;
@@ -535,13 +538,28 @@ ul.users-navigation {
   margin-right: 41px;
 }
 
-.slider-button {
+.slider-image-wrapper {
+  position: relative;
+}
+
+.slider-image-wrapper img {
+  display: block;
+}
+
+.slider-button-wrapper {
   position: absolute;
-  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.slider-button {
   width: 40px;
   height: 80px;
   border: none;
-  background: none;
+  background: url("../img/svg/slider-button-icon.svg") no-repeat center;
   cursor: pointer;
 }
 
@@ -559,14 +577,7 @@ ul.users-navigation {
 }
 
 .slider-prev {
-  order: -1;
-  align-self: center;
-  left: 20px;
-}
-
-.slider-next {
-  right: 20px;
-  align-self: center;
+  transform: rotate(180deg);
 }
 
 .description-container {
@@ -605,6 +616,7 @@ ul.users-navigation {
 }
 
 .more-information {
+  height: min-content;
   margin-left: 39px;
   grid-column: 1/2;
   grid-row: 3/4;
@@ -1592,7 +1604,8 @@ span.filter::before {
   position: absolute;
   left: 0;
   right: 0;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   height: 8px;
   background-color: #FFC700;
@@ -1603,8 +1616,8 @@ span.filter::before {
   position: absolute;
   left: 0;
   right: 0;
-  top: -8px;
-  bottom: -8px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   height: 40px;
   background-color: #FFC700;
@@ -1619,7 +1632,8 @@ span.filter::before {
   position: absolute;
   left: 0;
   right: 0;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   height: 8px;
   background-color: #AF4FFF;
@@ -1768,7 +1782,8 @@ span.filter::before {
   position: absolute;
   left: -10px;
   right: -10px;
-  top: 6px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   height: 8px;
   background-color: #FFC700;
@@ -1779,8 +1794,8 @@ span.filter::before {
   position: absolute;
   left: -10px;
   right: -10px;
-  top: -10px;
-  bottom: -6px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   height: 40px;
   background-color: #FFC700;
