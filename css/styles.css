@@ -262,13 +262,16 @@ div.users-navigation-list {
   top: 0;
   left: 356px;
   display: none;
+  padding: 10px;
   width: 160px;
-  height: 40px;
+
   margin-right: 40px;
   font-family: "Rubik", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  background: transparent;
+  border: 0;
   border-left: 2px solid #000000;
   border-radius: 0 25px 25px 0;
   cursor: pointer;
@@ -283,9 +286,7 @@ div.users-navigation-list {
 }
 
 .users-navigation-search input:not(:placeholder-shown) + .search-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 }
 
 .search-button:focus-visible {
@@ -329,9 +330,12 @@ ul.users-navigation {
 .users-navigation a {
   font-size: 16px;
   color: #000000;
+  padding-left: 8px;
 }
 
 .user {
+  position: relative;
+  right: -4px;
   margin-right: -29px;
 }
 
@@ -357,7 +361,7 @@ ul.users-navigation {
 
 .cart {
   position: relative;
-  right: -9px;
+  right: -10px;
 }
 
 .cart-count {
@@ -544,7 +548,7 @@ ul.users-navigation {
 
 .users-navigation-item a:focus-visible {
   outline: 2px solid #AF4FFF;
-  outline-offset: 10px;
+  outline-offset: 5px;
   border-radius: 25px;
 }
 
@@ -628,7 +632,7 @@ ul.users-navigation {
   border-radius: 25px;
 }
 
-.main-navigation-item a:active {
+.main-navigation-item a:active::after {
   opacity: 0.3;
 }
 
@@ -678,7 +682,7 @@ ul.users-navigation {
 .sub-catalog {
   display: none;
   position: absolute;
-  top: 46px;
+  top: calc(100% + 16px);
   left: -55px;
   width: 1160px;
   height: 145px;
@@ -742,7 +746,7 @@ ul.users-navigation {
   display: flex;
   justify-content: center;
   width: 560px;
-  min-height: 60px;
+  max-height: 560px;
   margin-right: 40px;
 }
 
@@ -793,10 +797,8 @@ ul.users-navigation {
 /*================== SLIDER-DESCRIPTION ================== */
 
 .description-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 172px 102px 110px 50px 50px;
   width: 560px;
+  margin-bottom: 150px;
 }
 
 .slide-number {
@@ -812,9 +814,8 @@ ul.users-navigation {
 }
 
 .slide-description-header {
-  grid-column: 1/3;
-  grid-row: 1/2;
-  align-self: center;
+  position: relative;
+  top: 2px;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
   font-style: normal;
@@ -825,7 +826,7 @@ ul.users-navigation {
 
 .slide-description {
   position: relative;
-  top: -8px;
+  top: 28px;
   grid-column: 1/3;
   grid-row: 2/3;
   margin: 0;
@@ -833,6 +834,7 @@ ul.users-navigation {
 }
 
 .more-information {
+  top: 75px;
   height: min-content;
   margin-left: 39px;
   grid-column: 1/2;
@@ -847,7 +849,8 @@ ul.users-navigation {
 
 .slider-pagination {
   position: relative;
-  top: 5px;
+  top: 52px;
+  right: -2px;
   display: flex;
   justify-content: flex-end;
   width: auto;
@@ -889,6 +892,9 @@ ul.users-navigation {
 }
 
 .specifications-list {
+  position: relative;
+  top: 125px;
+  right: -1px;
   display: flex;
 }
 
@@ -2205,14 +2211,17 @@ span.filter::before {
   display: grid;
   row-gap: 51px;
   grid-template-columns: 100%;
-  grid-template-rows: 70px auto 55px 70px;
+  grid-template-rows:  auto auto 55px 70px;
   margin-bottom: 78px;
 }
 
 .sorting-bar {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  padding-top: 17px;
+  padding-bottom: 18px;
   grid-column: 1/-1;
   grid-row: 1/2;
   background: #EBEBEB;
