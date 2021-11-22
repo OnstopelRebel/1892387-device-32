@@ -14,7 +14,7 @@
            height="36">
     </a>
     <div class="users-navigation-list">
-      <form action="#" method="get" class="users-navigation-search">
+      <form action="https://echo.htmlacademy.ru" method="get" class="users-navigation-search">
         <label for="search-form" class="visually-hidden">
           Поиск по сайту
         </label>
@@ -50,13 +50,13 @@
         </li>
         <li class="users-navigation-item cart">
           <a href="#" class="users-navigation-cart link link-decoration">
-            <span class="cart-count">2</span>
             <svg aria-hidden="true" focusable="false" width="16" height="14" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
               <path
                 d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z"
                 fill="#000"/>
             </svg>
+            <span class="cart-count">2</span>
             Корзина
           </a>
         </li>
@@ -127,7 +127,7 @@
                   <legend class="catalog-filter-title reset-legend">Стоимость</legend>
                   <div class="range">
                     <div class="range-scale">
-                      <div class="range-bar" style="left: 9px; width: 120px">
+                      <div class="range-bar range-bar-control">
                         <button type="button" class="range-toggle toggle-min">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
@@ -218,10 +218,10 @@
         <section class="catalog">
           <h3 class="visually-hidden">Список товаров</h3>
           <div class="sorting-bar">
-            <form class="sorting-type">
+            <form action="https://echo.htmlacademy.ru" method="get" class="sorting-type">
               <label class="sorting-list" for="sorting">Сортировка:</label>
               <select class="select-control" id="sorting" name="sorting">
-                <option value="popular">Сначала популярное</option>
+                <option value="popular">Сначала популярные</option>
                 <option value="cheap">Сначала дешёвое</option>
                 <option value="expensive">Сначала дорогое</option>
               </select>
@@ -252,6 +252,7 @@
             </div>
           </div>
           <ul class="catalog-list reset-list">
+            <!--            Для отображения значка "NEW" добавить к <article> класс label-new-->
             <li class="catalog-item">
               <article class="product">
                 <img class="product-card-image" src="img/jpg/monopod-lite.jpg"
@@ -272,7 +273,7 @@
                      height="380">
                 <div class="product-description">
                   <h3 class="product-card-title h-3-style">Профессиональная <br> селфи-палка</h3>
-                  <span class="product-card-price">1500 ₽</span>
+                  <span class="product-card-price">1 500 ₽</span>
                 </div>
                 <div class="product-link-wrapper">
                   <a class="product-card-link link-decoration" href="#">подробнее</a>
@@ -286,7 +287,7 @@
                 <div class="product-description">
                   <h3 class="product-card-title h-3-style">Непотопляемая<br>
                     селфи-палка</h3>
-                  <span class="product-card-price">2500 ₽</span>
+                  <span class="product-card-price">2 500 ₽</span>
                 </div>
                 <div class="product-link-wrapper">
                   <a class="product-card-link link-decoration" href="#">подробнее</a>
@@ -294,13 +295,13 @@
               </article>
             </li>
             <li class="catalog-item">
-              <article class="product">
+              <article class="product label-new">
                 <img class="product-card-image" src="img/jpg/monopod-arm.jpg"
                      alt="Селф-палка в виде человеческой руки с закрепленным телефоном" width="360" height="380">
                 <span class="new-item-label visually-hidden">new</span>
                 <div class="product-description">
                   <h3 class="product-card-title h-3-style">Селфи-палка «Следуй за<br> мной»</h3>
-                  <span class="product-card-price">4900 ₽</span>
+                  <span class="product-card-price">4 900 ₽</span>
                 </div>
                 <div class="product-link-wrapper">
                   <a class="product-card-link link-decoration" href="#">подробнее</a>
@@ -350,7 +351,7 @@
     </a>
     <section class="footer-contacts-address">
       <h2 class="visually-hidden">Адрес</h2>
-      <p class="footer-address">Санкт-Петербург, набережная реки Карповки,5, литера П.</p>
+      <p class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
     </section>
     <section class="footer-navigation">
       <h2 class="visually-hidden">Условия покупки и контакты</h2>

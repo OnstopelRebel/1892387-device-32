@@ -19,7 +19,7 @@
           Поиск по сайту
         </label>
         <input id="search-form" type="search" placeholder="Поиск по сайту">
-        <button class="search-button" type="submit">Найти</button>
+        <a class="search-button">Найти</a>
       </form>
       <ul class="users-navigation reset-list">
         <li class="users-navigation-item entrance">
@@ -45,13 +45,13 @@
         </li>
         <li class="users-navigation-item cart">
           <a href="#" class="users-navigation-cart link link-decoration">
-            <span class="cart-count">2</span>
             <svg aria-hidden="true" focusable="false" width="16" height="14" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
               <path
                 d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z"
                 fill="#000"/>
             </svg>
+            <span class="cart-count">2</span>
             Корзина
           </a>
         </li>
@@ -467,13 +467,14 @@
     </section>
   </div>
   <div class="subscribe-wrapper">
-    <section class="subscribe">
+    <section class="subscribe-section">
       <h2 class="h-2-style">Подпишитесь на рассылку</h2>
       <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,<br>
         длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
       <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe-form">
         <label class="visually-hidden" for="email-id">
           Подписка на рассылку</label>
+        <!-- Ошибка в форме - добавить к <input> класс subscribe-form-invalid -->
         <input type="email" class="subscribe" name="email" id="email-id" placeholder="Ваш e-mail">
         <button type="submit" class="subscribe-button">Подписаться</button>
       </form>
@@ -490,7 +491,7 @@
     </a>
     <section class="footer-contacts-address">
       <h2 class="visually-hidden">Адрес</h2>
-      <p class="footer-address">Санкт-Петербург, набережная реки Карповки,5, литера П.</p>
+      <p class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
     </section>
     <section class="footer-navigation">
       <h2 class="visually-hidden">Условия покупки и контакты</h2>
@@ -584,7 +585,7 @@
         <span class="name-span">Забавный у вас адрес</span>
       </label>
       <label class="modal-form-label modal-form-item">Что нужно привезти:
-        <input type="text" class="modal-input-item" name="Подробнее" placeholder="В свободной форме">
+        <input type="text" class="modal-input-item" name="more" placeholder="В свободной форме">
       </label>
       <div class="items-range-bar">
         <div class="title-range-wrapper">
