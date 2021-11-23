@@ -223,11 +223,13 @@ div.users-navigation-list {
   display: flex;
   width: 516px;
   margin-right: 36px;
+  min-height: 40px;
 }
 
 .users-navigation-search::before {
   content: "";
   position: absolute;
+  z-index: 1;
   left: 15px;
   top: 11%;
   transform: translateY(50%);
@@ -237,8 +239,8 @@ div.users-navigation-list {
 }
 
 .users-navigation-search input {
+  position: absolute;
   width: 516px;
-  height: 40px;
   padding-left: 52px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -258,13 +260,12 @@ div.users-navigation-list {
 }
 
 .search-button {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 356px;
   display: none;
   padding: 10px;
   width: 160px;
-
   margin-right: 40px;
   font-family: "Rubik", "Arial", sans-serif;
   font-weight: 400;
@@ -559,7 +560,7 @@ ul.users-navigation {
 /*================== MAIN-NAVIGATION ================== */
 
 .main-navigation {
-  margin-bottom: 157px;
+  margin-bottom: 155px;
 }
 
 .main-navigation-list {
@@ -815,7 +816,7 @@ ul.users-navigation {
 
 .slide-description-header {
   position: relative;
-  top: 2px;
+  top: 6px;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
   font-style: normal;
@@ -826,7 +827,7 @@ ul.users-navigation {
 
 .slide-description {
   position: relative;
-  top: 28px;
+  top: 33px;
   grid-column: 1/3;
   grid-row: 2/3;
   margin: 0;
@@ -834,7 +835,7 @@ ul.users-navigation {
 }
 
 .more-information {
-  top: 75px;
+  top: 78px;
   height: min-content;
   margin-left: 39px;
   grid-column: 1/2;
@@ -849,7 +850,7 @@ ul.users-navigation {
 
 .slider-pagination {
   position: relative;
-  top: 52px;
+  top: 58px;
   right: -2px;
   display: flex;
   justify-content: flex-end;
@@ -893,7 +894,7 @@ ul.users-navigation {
 
 .specifications-list {
   position: relative;
-  top: 125px;
+  top: 131px;
   right: -1px;
   display: flex;
 }
@@ -923,7 +924,7 @@ ul.users-navigation {
 
 .categories {
   width: 1160px;
-  margin: 0 auto 170px auto;
+  margin: 0 auto 172px auto;
 }
 
 .categories-navigation-list {
@@ -992,9 +993,9 @@ ul.users-navigation {
 
 .services-section-wrapper {
   z-index: -2;
-  height: 288px;
+  min-height: 288px;
   width: 100%;
-  margin-bottom: 90px;
+  margin-bottom: 88px;
   background: #F0F0F0;
 
 }
@@ -1019,7 +1020,7 @@ ul.users-navigation {
   content: "";
   position: absolute;
   top: -13px;
-  bottom: 13px;
+  bottom: -24px;
   left: 98%;
   z-index: 4;
   width: 7px;
@@ -1030,7 +1031,7 @@ ul.users-navigation {
   display: flex;
   flex-direction: column;
   width: 280px;
-  height: 319px;
+  height: calc(100% + 40px);
   padding-top: 66px;
   padding-bottom: 45px;
   font-family: "Raleway", "Arial", sans-serif;
@@ -1243,7 +1244,7 @@ ul.users-navigation {
   display: flex;
   justify-content: center;
   width: 1160px;
-  margin: 0 auto 87px auto;
+  margin: 0 auto 86px auto;
 }
 
 .about-us-contacts section::before {
@@ -1265,7 +1266,7 @@ ul.users-navigation {
 }
 
 .about-us-heading {
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 }
 
 .about-us-text {
@@ -1280,7 +1281,7 @@ ul.users-navigation {
 }
 
 .delivery-ways {
-  margin: 0 0 57px 0;
+  margin: 0 0 58px 0;
   padding-left: 20px;
 }
 
@@ -1340,7 +1341,7 @@ ul.users-navigation {
 }
 
 address {
-  margin-bottom: 28px;
+  margin-bottom: 29px;
   font-style: normal;
 }
 
@@ -1381,8 +1382,8 @@ p.contacts-address-text {
 
 /* =================== SUBSCRIBE ======================================================== */
 .subscribe-wrapper {
-  padding-top: 74px;
-  padding-bottom: 105px;
+  padding-top: 75px;
+  padding-bottom: 106px;
   width: 100%;
   background: #F0F0F0;
 }
@@ -2212,7 +2213,7 @@ span.filter::before {
   row-gap: 51px;
   grid-template-columns: 100%;
   grid-template-rows:  auto auto 55px 70px;
-  margin-bottom: 78px;
+  margin-bottom: 77px;
 }
 
 .sorting-bar {
@@ -2518,6 +2519,10 @@ span.filter::before {
   color: #000000;
   letter-spacing: calc(1em / 5);
   text-transform: uppercase;
+}
+
+.pagination-next a {
+  padding-right: 10px;
 }
 
 .pagination-item:first-child a:hover,
