@@ -1443,7 +1443,7 @@ p.contacts-address-text {
   width: 601px;
   padding-left: 0;
   padding-top: 6px;
-  border: none;
+  border: 0;
   background: #F0F0F0;
   border-bottom: 3px solid rgba(27%, 27%, 27%, 0.1);
 }
@@ -1452,9 +1452,10 @@ p.contacts-address-text {
   border-bottom: 3px solid rgba(27%, 27%, 27%, 0.2);
 }
 
-.subscribe-form .subscribe:focus {
+.subscribe-form .subscribe:focus-visible {
   background: #DCDCDC;
   outline: none;
+  border-bottom-color: #E0E0E0;
 }
 
 .subscribe-form .subscribe:active {
