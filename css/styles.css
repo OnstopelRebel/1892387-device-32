@@ -347,7 +347,7 @@ ul.users-navigation {
 .user {
   position: relative;
   right: -4px;
-  margin-right: -29px;
+  margin-right: -21px;
 }
 
 .entrance {
@@ -2268,6 +2268,7 @@ span.filter::before {
 
 .select-control {
   position: relative;
+  max-width: 220px;
   margin-left: 33px;
   padding: 7px 41px 9px 13px;
   font-family: "Rubik", "Arial", sans-serif;
